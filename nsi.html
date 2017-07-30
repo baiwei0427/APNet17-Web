@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="./js/jquery.min.js"></script> 
+	<script> 
+		$(function(){
+			$("#includeNav").load("nav.html"); 
+		});
+	</script> 
+	<script> 
+		$(function(){
+			$("#includeFooter").load("footer.html"); 
+		});
+	</script>
+	
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"-->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>APNET 2017</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <h1>1<sup>st</sup> Asia-Pacific Workshop on Networking (APNet 2017)</h1>
+        <h2>August 3-4 2017, Hong Kong, China</h2>
+      </div>
+      <!--script type="text/javascript">
+      try{
+          if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+              window.location.href="index-mobile.html";
+          }
+      }catch(e){}
+      </script-->
+    </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <div class="row">
+			<div id="includeNav"></div>
+			<section id="main-content">
+            <h1 style="margin-top: 0px">
+            <a id="keynote" class="anchor" href="#keynote" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Networking System Implementation (NSI) Talks</h1>
+		
+			<h2><a name="bojie"></a>Implementing ClickNP: Highly Flexible and High-Performance Network Processing with FPGA+CPU</h2>
+
+			<p><b>Abstract:</b> ClickNP is a highly flexible and high-performance network processing platform with reconfigurable hardware, published in SIGCOMM'16. This talk will share our implementation experience of the ClickNP system, both before and after paper submission. Throughout 8 months, we developed 100 elements and 5 network functions for the SIGCOMM paper, resulting in 1K commits and 20K lines of code. After the paper submission, ClickNP continues to develop and extends to a general-purpose FPGA programming framework in our research team, resulting in 300 elements, 86 application projects and 80K lines of code. <br/>
+			(1) Although with high-level languages, programming FPGA is still much more challenging than CPU. We had hard times to understand the behavior and pitfalls of black-box compilers, and shared our findings by enforcing coding style in the ClickNP language design and providing optimizations in the ClickNP compiler.<br/>
+			(2) OpenCL host to kernel communication model is a poor fit for network processing. This talk will elaborate internals of the high performance communication channel between CPU and FPGA.<br/>
+			(3) FPGA compilation takes hours, run-time debugging is hard, and simulation is inaccurate. For case study, we show how we identified and resolved a deadlock bug in the L4 load balancer, leveraging ClickNP debugging functionalities.</p>
+			
+			<p><b>Speaker Bio:</b> TBA</p>
+			
+			<h2><a name="seongmin"></a>Experiences in Intel SGX Research</h2>
+			
+			<p><b>Abstract:</b> Network applications and protocols are increasingly adopting security and privacy features, as they are becoming one of the primary requirements. Motivated by the recent movement towards commoditization of trusted execution environments (TEEs), our research explores alternative design choices that application and protocol designers should consider. In particular, we explore the possibility of using Intel SGX to provide security and privacy in a wide range of network applications. We show that leveraging hardware protection of TEEs opens up new possibilities, often at the benefit of a much simplified application/protocol design. We demonstrate its practical implications by exploring the design space for SGX-enabled software-defined inter-domain routing, peer-to-peer anonymity networks (Tor), and middleboxes. Finally, we share our experience in implementing an open-source Intel SGX emulator and prototyping applications that run on SGX platforms. </p>
+			
+			<p><b>Speaker Bio:</b> Seongmin Kim is currently studying at KAIST as a Ph.D. candidate from 2015 with Professor Dongsu Han specializing in network systems and security. His research interests are resource management and information security, in particular, system security (especially trusted computing) and network security. </p>
+			
+			<h2><a name="kyoungsoo"></a>Developing middelboxes with the mOS API</h2>
+						
+			<p><b>Abstract:</b> mOS is a specialized networking stack and an API for flow monitoring middleboxes. In this talk, we will briefly describe the basic design and implementation of the mOS stack and its API, and show how it simplifies the development of complex, flow-tracking middleboxes. We will also show a few real-world examples of middleboxes developed with the mOS API, and demonstrate the effectiveness in terms of code reduction and high performance. This is a joint talk with KyoungSoo Park and YoungGyoun Moon. KyoungSoo will explain the basic concept, and YoungGyoun will show a demo with a few mOS-based middleboxes.</p>
+			
+			<p><b>Speaker Bio:</b> KyoungSoo Park is an associate professor in the school of Electrical Engineering at KAIST. He received his B.S. degree from Seoul National University in 1997, and his M.A. and Ph.D. degrees from Princeton University in 2004 and 2007, respectively, all in computer science. His research interest is focused on the reliability, performance, and security issues in the design and implementation of networked computing systems. He has developed CoBlitz, a scalable large-file content distribution network (CDN), which is acquired by Verivue, Inc., and subsequently by Akamai, Inc. in 2012. He has co-developed HashCache, a memory-efficient caching storage system for developing regions, which was chosen as one of the top 10 technologies in 2009 by the MIT technology review magazine. More recently, he is working on high-performance packet/flow processing systems using multicore/manycore processors, such as PacketShader (a 40Gbps software router), SSLShader (13Gbps SSL proxy), Kargus (33 Gbps software NIDS), and APUNet (a high-performance packet processing system on APU). He and his students won the community award at NSDI 2014 (mTCP), and the best paper award at NSDI 2017 (mOS).</p>
+
+			<h2><a name="wei"></a>Experiments with Data Center Congestion Control Research</h2>
+						
+			<p><b>Abstract:</b> TBA</p>
+			
+			<p><b>Speaker Bio:</b> Wei Bai is an associate researcher 2 at Microsoft Research Asia. He received his Ph.D. from Hong Kong University of Science and Technology in 2017. He was also a recipient of Microsoft Research Asia Fellowship in 2015. Before that, he received his B.E. from Shanghai Jiao Tong University in 2013. He is working on data center networking now.</p>
+			
+          </section>
+        </div>
+      </div>
+	  
+	  <div id="includeFooter"></div>
+	</div>
+      
+
+    </body>
+  </html>
